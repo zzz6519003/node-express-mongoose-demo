@@ -25,7 +25,9 @@ var getTags = function (tags) {
  */
 
 var setTags = function (tags) {
-  return tags.split(',');
+  var tagList = [];
+  tags.split(',').forEach(function(e) { tagList.push(e.split(" ")); } )
+  return tagList;
 };
 
 /**
